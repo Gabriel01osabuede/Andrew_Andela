@@ -41,7 +41,8 @@ def impactEstimator(data):
 
     # calculating hospitalBedsByRequestedTime
     totalHospitalBeds = dictData['totalHospitalBeds']
-    hospitalBedsByRequestedTime = severeCasesByRequestedTime - totalHospitalBeds
+    totalHospitalBeds = (totalHospitalBeds * 35)//100
+    hospitalBedsByRequestedTime = totalHospitalBeds - severeCasesByRequestedTime
 
 
     # removing decimal places
@@ -69,7 +70,8 @@ def impactEstimator(data):
 
     # calculating hospitalBedsByRequestedTime
     totalHospitalBeds = dictData['totalHospitalBeds']
-    hospitalBedsByRequestedTime = severeCasesByRequestedTime - totalHospitalBeds
+    totalHospitalBeds = (totalHospitalBeds * 35) // 100
+    hospitalBedsByRequestedTime = totalHospitalBeds - severeCasesByRequestedTime
 
     # removing decimal places
     currentlyInfected = math.trunc(currentlyInfected)
