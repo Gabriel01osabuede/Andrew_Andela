@@ -1,3 +1,4 @@
+import json
 import math
 
 
@@ -7,6 +8,7 @@ def estimator(data):
 
 
 def periodInDays(periodtype,value):
+
     if periodtype == 'days':
         return value
     elif periodtype == "weeks":
@@ -35,7 +37,7 @@ def impactEstimator(data):
 
 
 
-# removing decimal places
+    # removing decimal places
     currentlyInfected = math.trunc(currentlyInfected)
     infectionsByRequestedTime = math.trunc(infectionsByRequestedTime)
 
@@ -55,13 +57,13 @@ def impactEstimator(data):
 
 
 
-# removing decimal places
+    # removing decimal places
     currentlyInfected = math.trunc(currentlyInfected)
     infectionsByRequestedTime = math.trunc(infectionsByRequestedTime)
 
 
 
-# adding all data to the dicionary
+    # adding all data to the dicionary
     severeImpact['currentlyInfected'] = currentlyInfected
     severeImpact['infectionsByRequestedTime'] = infectionsByRequestedTime
 
