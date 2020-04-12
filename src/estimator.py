@@ -43,28 +43,28 @@ def  impactEstimator(data):
   factor = (days/3)
 
   # calculation for infectionByRequestedTime
-  infectionByRequestedTime = currentlyInfected * (2 ** factor)
-  infectionByRequestedTime = math.trunc(infectionByRequestedTime)
+  infectionsByRequestedTime = currentlyInfected * (2 ** factor)
+  infectionsByRequestedTime = math.trunc(infectionsByRequestedTime)
 
 
   # calculation for casesForICUByRequestedTime
-  casesForICUByRequestedTime = (5/100) * infectionByRequestedTime
+  casesForICUByRequestedTime = (5/100) * infectionsByRequestedTime
   casesForICUByRequestedTime = math.trunc(casesForICUByRequestedTime)
 
   # calculation for casesForVentilatorsByRequestedTime
-  casesForVentilatorsByRequestedTime = (2/100) * infectionByRequestedTime
+  casesForVentilatorsByRequestedTime = (2/100) * infectionsByRequestedTime
   casesForVentilatorsByRequestedTime = math.trunc(casesForVentilatorsByRequestedTime)
 
   # calculation for dollarsInFlight
   avgDailyIncomePopulation = int(dictData['region']['avgDailyIncomePopulation'])
   avgDailyIncomeInUSD = int(dictData['region']['avgDailyIncomeInUSD'])
-  dollarsInFlight = (infectionByRequestedTime * avgDailyIncomePopulation * avgDailyIncomeInUSD) / days
+  dollarsInFlight = (infectionsByRequestedTime * avgDailyIncomePopulation * avgDailyIncomeInUSD) / days
   dollarsInFlight = math.trunc(dollarsInFlight)
 
 
   # adding all data gotten into the dictionary
   impact['currentlyInfected'] = currentlyInfected
-  impact['infectionByRequestedTime'] = infectionByRequestedTime
+  impact['infectionsByRequestedTime'] = infectionsByRequestedTime
   impact['severeCasesByRequestedTime'] = severeCasesByRequestedTime
   impact['hospitalBedsByRequestedTime'] = hospitalBedsByRequestedTime
   impact['casesForICUByRequestedTime'] = casesForICUByRequestedTime
@@ -76,8 +76,8 @@ def  impactEstimator(data):
   currentlyInfected = math.trunc(currentlyInfected)
 
   # calculation for infectionByRequestedTime
-  infectionByRequestedTime = currentlyInfected * (2 ** factor)
-  infectionByRequestedTime = math.trunc(infectionByRequestedTime)
+  infectionsByRequestedTime = currentlyInfected * (2 ** factor)
+  infectionsByRequestedTime = math.trunc(infectionsByRequestedTime)
 
   # calculation for severeCasesByRequestedTime
   severeCasesByRequestedTime = (15/100) * currentlyInfected
@@ -90,22 +90,22 @@ def  impactEstimator(data):
   hospitalBedsByRequestedTime = math.trunc(hospitalBedsByRequestedTime)
 
   # calculation for casesForICUByRequestedTime
-  casesForICUByRequestedTime = (5/100) * infectionByRequestedTime
+  casesForICUByRequestedTime = (5/100) * infectionsByRequestedTime
   casesForICUByRequestedTime = math.trunc(casesForICUByRequestedTime)
 
   # calculation for casesForVentilatorsByRequestedTime
-  casesForVentilatorsByRequestedTime = (2/100) * infectionByRequestedTime
+  casesForVentilatorsByRequestedTime = (2/100) * infectionsByRequestedTime
   casesForVentilatorsByRequestedTime = math.trunc(casesForVentilatorsByRequestedTime)
 
   # calculation for dollarsInFlight
   avgDailyIncomePopulation = int(dictData['region']['avgDailyIncomePopulation'])
   avgDailyIncomeInUSD = int(dictData['region']['avgDailyIncomeInUSD'])
-  dollarsInFlight = (infectionByRequestedTime * avgDailyIncomePopulation * avgDailyIncomeInUSD) / days
+  dollarsInFlight = (infectionsByRequestedTime * avgDailyIncomePopulation * avgDailyIncomeInUSD) / days
   dollarsInFlight = math.trunc(dollarsInFlight)
 
   # adding all data to the dicionary
   severeImpact['currentlyInfected']=currentlyInfected
-  severeImpact['infectionByRequestedTime'] = infectionByRequestedTime
+  severeImpact['infectionsByRequestedTime'] = infectionsByRequestedTime
   severeImpact['severeCasesByRequestedTime'] = severeCasesByRequestedTime
   severeImpact['hospitalBedsByRequestedTime'] = hospitalBedsByRequestedTime
   severeImpact['casesForICUByRequestedTime'] = casesForICUByRequestedTime
