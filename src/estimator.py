@@ -37,11 +37,11 @@ def impactEstimator(data):
     infectionsByRequestedTime = currentlyInfected * (2 ** factor)
 
     # calculating severeCasesByRequestedTime
-    severeCasesByRequestedTime = (15/100) * infectionsByRequestedTime
+    severeCasesByRequestedTime = (infectionsByRequestedTime * 15) // 100
 
     # calculating hospitalBedsByRequestedTime
     totalHospitalBeds = dictData['totalHospitalBeds']
-    totalHospitalBeds = (35/100) * totalHospitalBeds
+    totalHospitalBeds = (totalHospitalBeds * 35) // 100
     hospitalBedsByRequestedTime = severeCasesByRequestedTime - totalHospitalBeds
 
 
@@ -66,11 +66,11 @@ def impactEstimator(data):
     infectionsByRequestedTime = currentlyInfected * (2 ** factor)
 
     # calculating severeCasesByRequestedTime
-    severeCasesByRequestedTime = (15/100) * infectionsByRequestedTime
+    severeCasesByRequestedTime = (infectionsByRequestedTime * 15) / 100
 
     # calculating hospitalBedsByRequestedTime
     totalHospitalBeds = dictData['totalHospitalBeds']
-    totalHospitalBeds = (35/100) * totalHospitalBeds
+    totalHospitalBeds = (totalHospitalBeds * 35) / 100
     hospitalBedsByRequestedTime = severeCasesByRequestedTime - totalHospitalBeds
 
     # removing decimal places
