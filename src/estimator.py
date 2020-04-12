@@ -98,7 +98,7 @@ def impactEstimator(data):
     casesForVentilatorsByRequestedTime = (infectionsByRequestedTime * 2)/100
 
     # calculating dollarsInFlight
-    avgDailyIncomeInUSD = dictData['region']['avgDailyIncomeInUSD:']
+    avgDailyIncomeInUSD = dictData['region']['avgDailyIncomeInUSD']
     avgDailyIncomePopulation = dictData['region']['avgDailyIncomePopulation']
     dollarsInFlight = (infectionsByRequestedTime * avgDailyIncomePopulation * avgDailyIncomeInUSD)/days
 
