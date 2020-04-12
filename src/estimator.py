@@ -56,7 +56,7 @@ def impactEstimator(data):
     dollarsInFlight = (infectionsByRequestedTime * avgDailyIncomePopulation * avgDailyIncomeInUSD) / days
 
     # removing decimal places
-    currentlyInfected = math.trunc(currentlyInfected)
+    currentlyInfected = (currentlyInfected)
     severeCasesByRequestedTime = math.trunc(severeCasesByRequestedTime)
     infectionsByRequestedTime = math.trunc(infectionsByRequestedTime)
     hospitalBedsByRequestedTime = math.trunc(hospitalBedsByRequestedTime)
@@ -100,7 +100,7 @@ def impactEstimator(data):
     dollarsInFlight = (infectionsByRequestedTime * avgDailyIncomePopulation * avgDailyIncomeInUSD) / days
 
     # removing decimal places
-    currentlyInfected = math.trunc(currentlyInfected)
+    currentlyInfected = (currentlyInfected)
     infectionsByRequestedTime = math.trunc(infectionsByRequestedTime)
     severeCasesByRequestedTime = math.trunc(severeCasesByRequestedTime)
     hospitalBedsByRequestedTime = math.trunc(hospitalBedsByRequestedTime)
