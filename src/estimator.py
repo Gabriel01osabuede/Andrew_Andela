@@ -8,7 +8,7 @@ def estimator(data):
 
 
 def periodInDays(periodtype,value):
-
+    value = int(value)
     if periodtype == 'days':
         return value
     elif periodtype == "weeks":
@@ -26,11 +26,12 @@ def impactEstimator(data):
 
     # calculation for impact case
     # currently infected calculations
+
     currentlyInfected = dictData['reportedCases'] * 10
 
     # calculation for converting the periodtype into days.
-    days = periodInDays(dictData['periodType'], dictData['timeToElapse'])
-    factor = (days / 3)
+    days = periodInDays(dictData['periodType'],dictData['timeToElapse'])
+    factor = (days // 3)
 
     # calculation for infectionByRequestedTime
     infectionsByRequestedTime = currentlyInfected * (2 ** factor)
