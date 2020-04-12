@@ -33,27 +33,17 @@ def impactEstimator(data):
     # calculation for infectionByRequestedTime
     infectionsByRequestedTime = currentlyInfected * (2 ** factor)
 
-    # calculation for severeCasesByRequestedTime
-    severeCasesByRequestedTime = (15 / 100) * currentlyInfected
-
-    # calculation for hospitalBedsByRequestedTime
-    total = dictData['totalHospitalBeds']
-    hospitalBedInPercnetage = (35 / 100) * total
-    hospitalBedsByRequestedTime = (severeCasesByRequestedTime - hospitalBedInPercnetage)
 
 
 # removing decimal places
     currentlyInfected = math.trunc(currentlyInfected)
     infectionsByRequestedTime = math.trunc(infectionsByRequestedTime)
-    severeCasesByRequestedTime = math.trunc(severeCasesByRequestedTime)
-    hospitalBedsByRequestedTime = math.trunc(hospitalBedsByRequestedTime)
+
 
 
     # adding all data gotten into the dictionary
     impact['currentlyInfected'] = currentlyInfected
     impact['infectionsByRequestedTime'] = infectionsByRequestedTime
-    impact['severeCasesByRequestedTime'] = severeCasesByRequestedTime
-    impact['hospitalBedsByRequestedTime'] = hospitalBedsByRequestedTime
 
 
     # calculation for severeImpact Cases
@@ -63,27 +53,18 @@ def impactEstimator(data):
     # calculation for infectionByRequestedTime
     infectionsByRequestedTime = currentlyInfected * (2 ** factor)
 
-    # calculation for severeCasesByRequestedTime
-    severeCasesByRequestedTime = (15 / 100) * currentlyInfected
-
-    # calculation for hospitalBedsByRequestedTime
-    total = dictData['totalHospitalBeds']
-    hospitalBedInPercnetage = (35 / 100) * total
-    hospitalBedsByRequestedTime = (severeCasesByRequestedTime - hospitalBedInPercnetage)
 
 
 # removing decimal places
     currentlyInfected = math.trunc(currentlyInfected)
     infectionsByRequestedTime = math.trunc(infectionsByRequestedTime)
-    severeCasesByRequestedTime = math.trunc(severeCasesByRequestedTime)
-    hospitalBedsByRequestedTime = math.trunc(hospitalBedsByRequestedTime)
+
 
 
 # adding all data to the dicionary
     severeImpact['currentlyInfected'] = currentlyInfected
     severeImpact['infectionsByRequestedTime'] = infectionsByRequestedTime
-    severeImpact['severeCasesByRequestedTime'] = severeCasesByRequestedTime
-    severeImpact['hospitalBedsByRequestedTime'] = hospitalBedsByRequestedTime
+
 
 
     data = {
