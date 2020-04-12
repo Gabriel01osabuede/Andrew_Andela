@@ -17,10 +17,8 @@ def periodInDays(periodtype,value):
 
 
 def impactEstimator(data):
-    if type(data) == str:
-        dictData = json.load(data)
-    else:
-        dictData = data
+
+    dictData = data
 
     impact = {}
     severeImpact = {}
