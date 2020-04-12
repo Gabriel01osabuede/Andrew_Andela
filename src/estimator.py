@@ -45,10 +45,10 @@ def impactEstimator(data):
     infectionsByRequestedTime = currentlyInfected * (2 ** factor)
 
     # calculation for casesForICUByRequestedTime
-    casesForICUByRequestedTime = (infectionsByRequestedTime * 5) /100
+    casesForICUByRequestedTime = (5 / 100) * infectionsByRequestedTime
 
     # calculation for casesForVentilatorsByRequestedTime
-    casesForVentilatorsByRequestedTime = (infectionsByRequestedTime * 2) / 100
+    casesForVentilatorsByRequestedTime = (2 / 100) * infectionsByRequestedTime
 
     # calculation for dollarsInFlight
     avgDailyIncomePopulation = dictData['region']['avgDailyIncomePopulation']
@@ -81,18 +81,18 @@ def impactEstimator(data):
     infectionsByRequestedTime = currentlyInfected * (2 ** factor)
 
     # calculation for severeCasesByRequestedTime
-    severeCasesByRequestedTime = (currentlyInfected * 15) / 100
+    severeCasesByRequestedTime = (15 / 100) * currentlyInfected
 
     # calculation for hospitalBedsByRequestedTime
     total = dictData['totalHospitalBeds']
-    hospitalBedInPercnetage = (total * 35) / 100
+    hospitalBedInPercnetage = (35 / 100) * total
     hospitalBedsByRequestedTime = (severeCasesByRequestedTime - hospitalBedInPercnetage)
 
     # calculation for casesForICUByRequestedTime
-    casesForICUByRequestedTime = (infectionsByRequestedTime * 5) / 100
+    casesForICUByRequestedTime = (5 / 100) * infectionsByRequestedTime
 
     # calculation for casesForVentilatorsByRequestedTime
-    casesForVentilatorsByRequestedTime = (infectionsByRequestedTime * 2) / 100
+    casesForVentilatorsByRequestedTime = (2 / 100) * infectionsByRequestedTime
 
     # calculation for dollarsInFlight
     avgDailyIncomePopulation = dictData['region']['avgDailyIncomePopulation']
