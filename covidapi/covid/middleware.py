@@ -9,7 +9,8 @@ class ResponseTimeMiddware:
         response=self.get_response(request)
         file = open('log.txt','a')
         serveTime=time.time() - start_time
-        line = request.method +" "+request.path +" 200 "+ str(serveTime) +" MS\n"
+        status = request.status
+        line = request.method +"    "+request.path +"    "+  status  +  "   " +str(serveTime) +"MS\n"
         file.write(line)
         file.close()
         return response
