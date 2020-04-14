@@ -2,6 +2,7 @@ import json
 import math
 
 
+
 def estimator(data):
     data = impactEstimator(data)
     return data
@@ -56,7 +57,7 @@ def impactEstimator(data):
     dollarsInFlight = (infectionsByRequestedTime * avgDailyIncomePopulation * avgDailyIncomeInUSD)/days
 
 
-# removing decimal places
+    # removing decimal places
     currentlyInfected = math.trunc(currentlyInfected)
     infectionsByRequestedTime = math.trunc(infectionsByRequestedTime)
     severeCasesByRequestedTime = math.trunc(severeCasesByRequestedTime)
